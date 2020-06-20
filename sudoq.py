@@ -365,7 +365,8 @@ def testStrengths(grid, repeats = 100, maxIterations = 500,
         The array containing the strengths to be tested. The default is 
         .1 to 1 with .1 steps.
     fileName : string, optional
-        The name of output file. The default is "out.txt".
+        The name of output file. The default is "out
+        ".
 
     Returns
     -------
@@ -416,7 +417,7 @@ def testClassicalSolution(folder, repeats = 100, outFileName = "out.txt"):
 
     f = open(outFileName,"a+")    
 
-    for filename in glob.glob(folder+"\\*.txt"):
+    for filename in glob.glob(folder+"*.txt"):
         x = readSudoku(filename)
         n = int(sqrt(x.shape[0]))
         for i in range(repeats):
@@ -483,7 +484,7 @@ def testClassicalSolutionAfterDeletion(folder, repeats = 100, outFileName = "out
 
     f = open(outFileName,"a+")    
 
-    for filename in glob.glob(folder+"\\*.txt"):
+    for filename in glob.glob(folder+"*.txt"):
         for i in range(repeats):
             x = readSudoku(filename)
             n = int(sqrt(x.shape[0]))
